@@ -1,0 +1,28 @@
+name: Build Typst Document
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build container image
+        run: docker build -t typst-build -f .devcontainer/Containerfile .
+
+      - name: Build document
+        run: |
+          docker run --rm -v "${{ github.workspace }}:/work" -w /work typst-build \
+            compile --root . template/note/main.typ template/note/main.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: document
+          path: template/note/main.pdf
