@@ -6,7 +6,12 @@ RUN dnf install -y unzip ibm-plex-*-fonts ipa*-fonts mrsw-biz-*-fonts \
   && rm -f UDEVGothic_NF_v2.1.0.zip
 
 # Main stage
-FROM ghcr.io/typst/typst:0.14.0
+FROM mcr.microsoft.com/devcontainers/base:alpine
+
+# intall typst-cli
+RUN curl -L https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz | tar -xJvf - \
+  && install typst-*/typst /usr/local/bin/ \
+  && rm -rf typst-*
 
 # Copy fonts from Fedora stage
 COPY --from=fonts /usr/share/fonts /usr/share/fonts

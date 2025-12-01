@@ -19,7 +19,7 @@ jobs:
       - name: Build document
         run: |
           docker run --rm -v "${{ github.workspace }}:/work" -w /work typst-build \
-            compile --root . template/note/main.typ template/note/main.pdf
+            typst compile --root . template/note/main.typ template/note/main.pdf
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
