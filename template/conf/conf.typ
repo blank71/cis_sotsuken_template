@@ -65,8 +65,8 @@
       amount: 1em,
     ),
     justify: true, // 両端揃え
-    leading: 0.65em, // **ここ注目** 行間距離
-    spacing: 0.65em, // **ここ注目** 段間距離
+    leading: 0.65em, // 行間距離
+    spacing: 0.65em, // 段間距離
   )
 
   set document(
@@ -77,7 +77,6 @@
   )
 
   show: style-algorithm
-  // show: remove-cjk-break-space
   show: cjk-spacer.with(lang: "ja")
 
   set heading(numbering: numbly("{1}  ", default: "1.1  "))
