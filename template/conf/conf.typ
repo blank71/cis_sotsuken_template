@@ -8,10 +8,6 @@
 // index
 #import "@preview/in-dexter:0.7.2": *
 
-// check list text
-#import "@preview/cheq:0.2.3": checklist
-
-
 // 和文改善パッケージ
 #import "@preview/cjk-spacer:0.1.0": cjk-spacer
 
@@ -209,9 +205,6 @@
       []
     }
   })
-
-  // check box
-  show: checklist
 
   // final
   body
