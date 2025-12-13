@@ -1,4 +1,4 @@
-#import "@preview/cetz:0.4.1": *
+#import "@preview/cetz:0.4.2": *
 #import "@preview/fletcher:0.5.8" as fletcher: edge, node
 #import "@preview/ctheorems:1.1.3": *
 #import "@preview/numbly:0.1.0": numbly
