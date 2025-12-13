@@ -6,7 +6,7 @@
 #import "@preview/algorithmic:1.0.7": *
 
 // index
-#import "@preview/in-dexter:0.7.0": *
+#import "@preview/in-dexter:0.7.2": *
 
 // check list text
 #import "@preview/cheq:0.2.3": checklist
