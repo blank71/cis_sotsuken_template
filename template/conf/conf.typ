@@ -1,4 +1,4 @@
-#import "@preview/cetz:0.4.1": *
+#import "@preview/cetz:0.4.2": *
 #import "@preview/fletcher:0.5.8" as fletcher: edge, node
 #import "@preview/ctheorems:1.1.3": *
 #import "@preview/numbly:0.1.0": numbly
@@ -6,11 +6,7 @@
 #import "@preview/algorithmic:1.0.7": *
 
 // index
-#import "@preview/in-dexter:0.7.0": *
-
-// check list text
-#import "@preview/cheq:0.2.3": checklist
-
+#import "@preview/in-dexter:0.7.2": *
 
 // 和文改善パッケージ
 #import "@preview/cjk-spacer:0.1.0": cjk-spacer
@@ -209,9 +205,6 @@
       []
     }
   })
-
-  // check box
-  show: checklist
 
   // final
   body
